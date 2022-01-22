@@ -25,43 +25,41 @@
 
     <!-- Custom styles for this template -->
     <link href="/assets/css/engine.css" rel="stylesheet">
-    <link href="/assets/css/bs.cover.css" rel="stylesheet">
+    <link href="/assets/css/bs.signin.css" rel="stylesheet">
   </head>
-  <body class="d-flex h-100 text-center text-white bg-dark">
+  <body class="text-center">
     
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-      <header class="mb-auto">
-        <div>
-          <h3 class="float-md-start mb-0">
-            <img src="/assets/img/brand/zorg/zorg.logo.32.png" alt="Zorg Gravatar Server"> Zorg Gravatar Server
-          </h3>
-          <nav class="nav nav-masthead justify-content-center float-md-end">
-            <a class="nav-link active" aria-current="page" href="/"><i class="bi bi-house-fill"></i> Home</a>
-            <a class="nav-link" href="https://github.com/ZorgCC/gravatar-server/wiki" target="_blank"><i class="bi bi-life-preserver"></i> Docs</a>
-            <a class="nav-link" href="https://github.com/ZorgCC/gravatar-server" target="_blank"><i class="bi bi-git"></i> Sources</a>
-            <a class="nav-link" href="/login.html"><i class="bi bi-door-open"></i> Login</a>
-          </nav>
+    <main class="form-signin">
+      <form>
+        <img class="mb-4" src="/assets/img/brand/zorg/zorg.logo.72.png" alt="" width="72" height="72">
+        <h1 class="h3 mb-3 fw-normal  position-relative">Please Sign in  <span class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle "><i class="bi bi-info-circle" data-bs-toggle="tooltip" data-bs-placement="right" title="The token is printed in the server console and gravatar-server.log under the logs directory."></i></span></h1>
+    
+        <div class="form-floating">
+          <input type="password" class="form-control" id="floatingPassword" placeholder="Token">
+          <label for="floatingPassword">Token</label>
         </div>
-      </header>
     
-      <main class="px-3">
-        <h1>Welcome to Zorg Gravatar Server</h1>
-        <p class="lead">Open source free, Gravatar-compatible avatar lightweight server written in php with simple admin panel.</p>
-        <p class="lead">
-          <a href="/login.html" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Cool! <i class="bi bi-lightning"></i> Get started!</a>
-        </p>
-      </main>
+        <div class="checkbox mb-3">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+        <p class="mt-5 mb-3 text-muted">Gravatar Server v0.1, <br><i class="bi bi-github"></i> <a href="https://github.com/ZorgCC/gravatar-server" class="text-white">Source code</a>,
+          by <a href="https://zorg.cc" class="text-white">Zorg Software Team</a>.</p>
+      </form>
+    </main>
     
-      <footer class="mt-auto text-white-50">
-        <p>
-          Gravatar Server v0.1, <i class="bi bi-github"></i> <a href="https://github.com/ZorgCC/gravatar-server" class="text-white">Source code</a>,
-           by <a href="https://zorg.cc" class="text-white">Zorg Software Team</a>.</p>
-      </footer>
-    </div>
 
-
-    <script src="/assets/js/bootstrap.js"></script>
-
+    <script src="/assets/js/jquery/jquery-3.6.0.min.js"></script>
+    <script src="/assets/js/popper/popper.min.js"></script>
+    <script src="/assets/js/bootstrap/bootstrap.min.js"></script>
+<script>
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+</script>
       
   </body>
 </html>
