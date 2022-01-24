@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
-    <title>Zorg Gravatar Server</title>
+    <title>Zorg Avatar Server &bull; Sign In</title>
 
     <link rel="canonical" href="https://getbootstrap.com/examples/sticky-footer-navbar/">
     <!-- Bootstrap core CSS -->
@@ -31,21 +31,25 @@
     
     <main class="form-signin">
       <form>
-        <img class="mb-4" src="/assets/img/brand/zorg/zorg.logo.72.png" alt="" width="72" height="72">
-        <h1 class="h3 mb-3 fw-normal  position-relative">Please Sign in  <span class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle "><i class="bi bi-info-circle" data-bs-toggle="tooltip" data-bs-placement="right" title="The token is printed in the server console and gravatar-server.log under the logs directory."></i></span></h1>
-    
+        <img class="mb-4" src="/assets/img/brand/zorg/zorg.logo.72.png" alt="" width="72" height="72" title="Zorg Avatar Server">
+        <h1 class="h3 mb-3 fw-normal  position-relative">Please Sign in  <span class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle "><i class="bi bi-info-circle" data-bs-toggle="tooltip" data-bs-placement="right" title="The password has been defined via installation, if you forgot it - you can reset it with your server's console."></i></span></h1>
+       
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
         <div class="form-floating">
-          <input type="password" class="form-control" id="floatingPassword" placeholder="Token">
-          <label for="floatingPassword">Token</label>
+          <input type="password" class="form-control password-input" id="floatingPassword" placeholder="Password">
+          <label for="floatingPassword">Password</label>
         </div>
     
-        <div class="checkbox mb-3">
-          <label>
-            <input type="checkbox" value="remember-me"> Remember me
-          </label>
+        <button class="w-100 btn btn-lg btn-primary" type="submit"><i class="bi bi-key"></i> Sign in</button>
+
+        <div class="mb-3">
+          <a href="/reset.html"><i class="bi bi-life-preserver"></i> Forgot your password?</a>
         </div>
-        <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
-        <p class="mt-5 mb-3 text-muted">Gravatar Server v0.1, <br><i class="bi bi-github"></i> <a href="https://github.com/ZorgCC/gravatar-server" class="text-white">Source code</a>,
+        <p class="mt-5 mb-3 text-muted">Zorg Avatar Server v0.1, <br><i class="bi bi-github"></i> <a href="https://github.com/ZorgCC/avatar-server" class="text-white">Source code</a>,
           by <a href="https://zorg.cc" class="text-white">Zorg Software Team</a>.</p>
       </form>
     </main>
